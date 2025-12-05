@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookslet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Bookslet</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#" class="login-btn">Login</a></li>
+        </ul>
+        <div class="menu-icon" id="menuIcon">☰</div>
+    </nav>
+
+    <section class="hero">
+        <h1>Discover The Best Books</h1>
+        <p>Read, Learn, and Grow with Bookslet</p>
+        <a href="#" class="explore-btn">Explore Books</a>
+    </section>
+
+    <section class="home">
+        <h2 class="section-title">Featured Books</h2>
+
+        <div class="book-container">
+
+            <div class="book-card">
+                <a href="books.html">
+                    <img src="https://tse2.mm.bing.net/th/id/OIP.fiUXQqk-cqoTu1s2_bKocQHaEJ?pid=Api&P=0&h=180"
+                        alt="Book 1">
+                    <h3>The Magic Book</h3>
+                    <p>A wonderful storybook for kids.</p>
+                </a>
+            </div>
+
+            <div class="book-card">
+                <a href="books.html">
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.gQ1r1xEj7wLWWb0b8sQKQQHaEr?pid=Api&P=0&h=180"
+                        alt="Book 2">
+                    <h3>Science Facts</h3>
+                    <p>Amazing facts every student must know.</p>
+                </a>
+            </div>
+
+            <div class="book-card">
+                <a href="books.html">
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.y85CDAv6C9aKVlmJmm_hywHaEJ?pid=Api&P=0&h=180"
+                        alt="Book 3">
+                    <h3>Adventure World</h3>
+                    <p>Explore the world of adventures.</p>
+                </a>
+            </div>
+            <div class="book-card">
+                <a href="books.html">
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.y85CDAv6C9aKVlmJmm_hywHaEJ?pid=Api&P=0&h=180"
+                        alt="Book 3">
+                    <h3>Adventure World</h3>
+                    <p>Explore the world of adventures.</p>
+                </a>
+            </div>
+            <div class="book-card">
+                <a href="books.html">
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.y85CDAv6C9aKVlmJmm_hywHaEJ?pid=Api&P=0&h=180"
+                        alt="Book 3">
+                    <h3>Adventure World</h3>
+                    <p>Explore the world of adventures.</p>
+                </a>
+            </div>
+            <div class="book-card">
+                <a href="books.html">
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.y85CDAv6C9aKVlmJmm_hywHaEJ?pid=Api&P=0&h=180"
+                        alt="Book 3">
+                    <h3>Adventure World</h3>
+                    <p>Explore the world of adventures.</p>
+                </a>
+            </div>
+            <div class="book-card">
+                <a href="books.html">
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.y85CDAv6C9aKVlmJmm_hywHaEJ?pid=Api&P=0&h=180"
+                        alt="Book 3">
+                    <h3>Adventure World</h3>
+                    <p>Explore the world of adventures.</p>
+                </a>
+            </div>
+            <div class="book-card">
+                <a href="books.html">
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.y85CDAv6C9aKVlmJmm_hywHaEJ?pid=Api&P=0&h=180"
+                        alt="Book 3">
+                    <h3>Adventure World</h3>
+                    <p>Explore the world of adventures.</p>
+                </a>
+            </div>
+            <div class="book-card">
+                <a href="books.html">
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.y85CDAv6C9aKVlmJmm_hywHaEJ?pid=Api&P=0&h=180"
+                        alt="Book 3">
+                    <h3>Adventure World</h3>
+                    <p>Explore the world of adventures.</p>
+                </a>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section class="about-section">
+        <h2>Why Choose Bookslet?</h2>
+        <div class="about-box">
+            <div>
+                <h3>High Quality Content</h3>
+                <p>We provide the best educational and story books for all ages.</p>
+            </div>
+            <div>
+                <h3>Free Reading Tips</h3>
+                <p>Improve your skills with our expert reading tips.</p>
+            </div>
+            <div>
+                <h3>Easy to Use</h3>
+                <p>Simple and clean website for seamless learning.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-section">
+        <h2>Our Services</h2>
+        <ul class="services-list">
+            <li>Kids Story Books</li>
+            <li>Educational Books</li>
+            <li>PDF Learning Materials</li>
+            <li>Study Guides & Notes</li>
+            <li>Online Reading Support</li>
+        </ul>
+    </section>
+
+    <footer class="footer">
+        <p>© 2025 Bookslet | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        const menuIcon = document.getElementById('menuIcon');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+    </script>
+
+</body>
+
+</html>
