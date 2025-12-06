@@ -1,159 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bookslet</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz Oopsation</title>
 
+<!-- CSS Link -->
+<link rel="stylesheet" href="style.css">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
 <body>
 
-    <nav class="navbar">
-        <div class="logo">Bookslet</div>
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#" class="login-btn">Login</a></li>
-        </ul>
-        <div class="menu-icon" id="menuIcon">☰</div>
-    </nav>
+<div class="overlay"></div>
 
-    <section class="hero">
-        <h1>Discover The Best Books</h1>
-        <p>Read, Learn, and Grow with Bookslet</p>
-        <a href="#" class="explore-btn">Explore Books</a>
-    </section>
+<!-- LOGIN -->
+<div class="screen" id="loginScreen">
+    <img src="https://cdn-icons-png.flaticon.com/512/201/201571.png" class="logo">
+    <h1>Quiz Oopsation</h1>
+    <input type="text" id="usernameInput" placeholder="Enter Name">
+    <button onclick="login()">Start Quiz</button>
+</div>
 
-    <section class="home">
-        <h2 class="section-title">Featured Books</h2>
+<!-- HOME -->
+<div class="screen hide" id="homeScreen">
+    <h2>Welcome, <span id="usernameDisplay"></span> 👋</h2>
+    <p class="sub">Choose Category</p>
 
-        <div class="book-container">
+    <button onclick="startQuiz('maths')">📘 Maths</button>
+    <button onclick="startQuiz('gk')">🌍 GK</button>
+    <button onclick="startQuiz('cricket')">🏏 Cricket</button>
+</div>
 
-            <div class="book-card">
-                <a href="books.html">
-                    <img src="https://tse2.mm.bing.net/th/id/OIP.fiUXQqk-cqoTu1s2_bKocQHaEJ?pid=Api&P=0&h=180"
-                        alt="Book 1">
-                    <h3>The Magic Book</h3>
-                    <p>A wonderful storybook for kids.</p>
-                </a>
-            </div>
+<!-- QUIZ -->
+<div class="screen hide" id="quizScreen">
+    <h2 id="quizTitle"></h2>
+    <h3 id="questionText"></h3>
+    <div id="optionsBox"></div>
+    <button class="next-btn" onclick="nextQuestion()">Next ➤</button>
+</div>
 
-            <div class="book-card">
-                <a href="books.html">
-                    <img src="https://tse3.mm.bing.net/th/id/OIP.gQ1r1xEj7wLWWb0b8sQKQQHaEr?pid=Api&P=0&h=180"
-                        alt="Book 2">
-                    <h3>Science Facts</h3>
-                    <p>Amazing facts every student must know.</p>
-                </a>
-            </div>
+<!-- RESULT -->
+<div class="screen hide" id="resultScreen">
+    <h1>Completed🎉</h1>
+    <h2>Your Score: <span id="finalScore"></span></h2>
+    <button onclick="goHome()">Go Home</button>
+</div>
 
-            <div class="book-card">
-                <a href="books.html">
-                    <img src="https://tse3.mm.bing.net/th/id/OIP.y85CDAv6C9aKVlmJmm_hywHaEJ?pid=Api&P=0&h=180"
-                        alt="Book 3">
-                    <h3>Adventure World</h3>
-                    <p>Explore the world of adventures.</p>
-                </a>
-            </div>
-            <div class="book-card">
-                <a href="books.html">
-                    <img src="https://tse3.mm.bing.net/th/id/OIP.y85CDAv6C9aKVlmJmm_hywHaEJ?pid=Api&P=0&h=180"
-                        alt="Book 3">
-                    <h3>Adventure World</h3>
-                    <p>Explore the world of adventures.</p>
-                </a>
-            </div>
-            <div class="book-card">
-                <a href="books.html">
-                    <img src="https://tse3.mm.bing.net/th/id/OIP.y85CDAv6C9aKVlmJmm_hywHaEJ?pid=Api&P=0&h=180"
-                        alt="Book 3">
-                    <h3>Adventure World</h3>
-                    <p>Explore the world of adventures.</p>
-                </a>
-            </div>
-            <div class="book-card">
-                <a href="books.html">
-                    <img src="https://tse3.mm.bing.net/th/id/OIP.y85CDAv6C9aKVlmJmm_hywHaEJ?pid=Api&P=0&h=180"
-                        alt="Book 3">
-                    <h3>Adventure World</h3>
-                    <p>Explore the world of adventures.</p>
-                </a>
-            </div>
-            <div class="book-card">
-                <a href="books.html">
-                    <img src="https://tse3.mm.bing.net/th/id/OIP.y85CDAv6C9aKVlmJmm_hywHaEJ?pid=Api&P=0&h=180"
-                        alt="Book 3">
-                    <h3>Adventure World</h3>
-                    <p>Explore the world of adventures.</p>
-                </a>
-            </div>
-            <div class="book-card">
-                <a href="books.html">
-                    <img src="https://tse3.mm.bing.net/th/id/OIP.y85CDAv6C9aKVlmJmm_hywHaEJ?pid=Api&P=0&h=180"
-                        alt="Book 3">
-                    <h3>Adventure World</h3>
-                    <p>Explore the world of adventures.</p>
-                </a>
-            </div>
-            <div class="book-card">
-                <a href="books.html">
-                    <img src="https://tse3.mm.bing.net/th/id/OIP.y85CDAv6C9aKVlmJmm_hywHaEJ?pid=Api&P=0&h=180"
-                        alt="Book 3">
-                    <h3>Adventure World</h3>
-                    <p>Explore the world of adventures.</p>
-                </a>
-            </div>
-
-
-        </div>
-    </section>
-
-    <section class="about-section">
-        <h2>Why Choose Bookslet?</h2>
-        <div class="about-box">
-            <div>
-                <h3>High Quality Content</h3>
-                <p>We provide the best educational and story books for all ages.</p>
-            </div>
-            <div>
-                <h3>Free Reading Tips</h3>
-                <p>Improve your skills with our expert reading tips.</p>
-            </div>
-            <div>
-                <h3>Easy to Use</h3>
-                <p>Simple and clean website for seamless learning.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="services-section">
-        <h2>Our Services</h2>
-        <ul class="services-list">
-            <li>Kids Story Books</li>
-            <li>Educational Books</li>
-            <li>PDF Learning Materials</li>
-            <li>Study Guides & Notes</li>
-            <li>Online Reading Support</li>
-        </ul>
-    </section>
-
-    <footer class="footer">
-        <p>© 2025 Bookslet | All Rights Reserved</p>
-    </footer>
-
-    <script>
-        const menuIcon = document.getElementById('menuIcon');
-        const navLinks = document.querySelector('.nav-links');
-
-        menuIcon.addEventListener('click', () => {
-            navLinks.classList.toggle('show');
-        });
-    </script>
-
+<!-- JS Link -->
+<script src="script.js"></script>
 </body>
-
 </html>
